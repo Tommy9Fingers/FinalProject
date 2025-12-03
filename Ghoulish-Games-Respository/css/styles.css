@@ -1,0 +1,376 @@
+/*  
+Author: Brandon Mardoian 
+File Name: styles.css
+Date: 11/28/2025
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* Style rules for body and images */
+
+body{
+   font-family:Arial, Helvetica, sans-serif;
+    background-color: #0b0b0f;
+    color: #f2f2f4;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Style rules for mobile viewport */
+
+
+/* Style rules to show mobile class and hide tab-desk class */
+
+.mobile {
+   display: block;
+}
+
+.tab-desk {
+   display: none;
+}
+
+
+/* Style rules for header area */
+
+.mobile h1, .mobile h3{
+   padding: 2%;
+}
+
+.mobile h1 {
+   font-family: "Creepster", system-ui;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.mobile h3 {
+   font-family: "Creepster", serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+}
+
+/* Style rules for navigation area */
+  
+   /* theme colors*/
+:root{
+   --gg-orange: #ff7a18;
+   --gg-slime: #73ff3b;
+}
+
+   /*creepsster font for brand and headings */
+.gg-title, .gg-brand-text, .gg-tagline, h1, h2{
+   font-family: "Creepster", cursive;
+}
+
+   /*Orange title*/
+.gg-title{
+   color: var(--gg-orange);
+}
+
+   /*green tagline*/
+.gg-tagline{
+   color: var(--gg-slime);
+}
+
+   /*brand text green*/
+.gg-brand-text{
+   color: var(--gg-slime);
+}
+
+
+.gg-nav {
+    background-color: rgba(0,0,0,0.65);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+   /*navbar links creepster and color*/
+.gg-nav .navbar-nav .nav-link{
+   font-family: "Creepster", cursive;
+   color: var(--gg-orange) !important;
+   letter-spacing: 0.5px;
+}
+
+   /*hover for navbar*/
+.gg-nav .navbar-nav .nav-link:hover, .gg-nav .navbar-nav .nav-link:focus{
+   color: var(--gg-slime)!important;
+   text-decoration: none;
+}
+
+   /*active navbar*/
+.gg-nav .navbar-nav .nav-item.active .nav-link, .gg-nav .navbar-nav .nav-link.active{
+   color: var(--gg-orange)!important;
+}
+
+
+.gg-logo{
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 0.6rem;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.gg-nav .navbar-brand{
+   color: #73ff3b !important;
+}
+
+.gg-nav .navbar-brand:hover{
+   color: #ff7a18;
+}
+
+
+h1, h2{
+   font-family: "Creepster";
+   color: #ff7a18;
+}
+
+
+
+
+
+main {
+   padding: 2%;
+}
+
+main p{
+   font-size: 1.1em;
+}
+
+main h3{
+   padding-top: 2%;
+}
+
+main ul{
+   list-style-type: square;
+}
+
+/* Style rules for class and id selectors */
+
+.link {
+   color: #73ff3b;
+   text-decoration: none;
+   font-weight: bold;
+   font-style: italic;
+}
+
+.link:hover{
+    color:#ff7a18;
+}
+
+
+.round{
+   border-radius: 12px;
+}
+
+
+
+#info ul{
+   margin-left: 10%;
+}
+
+
+
+/* Style rules for footer content */
+
+footer{
+   text-align: center;
+   font-size: 0.85em;
+   background-color: rgba(0,0,0,0.45);
+   color: #f2f2f4;
+   border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+footer a{
+   color: var(--gg-orange);
+   text-decoration: none;
+   font-family: "Creepster", cursive;
+}
+
+footer a:hover, footer a:focus{
+    color: var(--gg-slime);
+    text-decoration: none;
+}
+
+.social img{
+   display: inline-block;
+   height: 26px;
+   width: auto;
+   padding: 0;
+   margin: 0 6px;
+   vertical-align: middle;
+}
+
+audio{
+   width: 100%;
+   max-width: 420px;
+}
+
+.gg-video{
+   max-width: 100%;
+   display: block;
+   margin: 0 auto 4%;
+}
+
+
+/* Media Query for Tablet Viewport */
+
+@media screen and (min-width: 620px), print{
+
+   /* Tablet Viewport: Show tab-desk class, hide mobile class */
+
+   .tab-desk {
+      display: block;
+   }
+
+   .mobile, .mobile-nav {
+      display: none;
+   }
+
+   .grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
+   }
+
+   aside {
+      grid-column: 1 / span 2;
+   }
+
+   form {
+      width: 70%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   /* Tablet Viewport: Style rules for footer area */
+
+   footer{
+      overflow: auto;
+      padding: 1.25rem 0;
+   }
+
+   .copyright {
+      float: left;
+      width: 65%;
+   }
+
+   .social{
+      float: right;
+      width: 25%;
+   }
+
+}
+
+/* Media Query for Desktop Viewport */
+
+@media screen and (min-width: 1000px), print{
+
+   /* Desktop Viewport: Show desktop class, hide mobile-tablet class */
+
+   .desktop {
+      display: block;
+   }
+
+   .mobile-tablet {
+      display: none;
+   }
+
+   /* Desktop Viewport: Style rules for main content */
+
+   #info ul {
+      margin-left: 5%;
+   }
+
+   .grid {
+      grid-template-columns: auto auto auto;
+      grid-gap: 30px;
+   }
+
+   aside{
+      grid-column: 1 / span 3;
+      font-size: 2em;
+   }
+
+   /* Style rules for table */
+
+   table {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-collapse: collapse;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      color: #f2f2f4;
+   }
+
+   caption {
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 1%;
+   }
+
+   th, td {
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 1%;
+   }
+
+   th {
+      background-color: rgba(255,122,24,0.18);
+      color: #f2f2f4;
+      font-size: 1.15em;
+   }
+
+   tr:nth-child(odd){
+      background-color: rgba(255,255,255,0.04);
+   }
+
+   form {
+      width: auto;
+   }
+}
+
+/* Media Query for Large Desktop Viewports */
+
+@media screen and (min-width: 1921px), print{
+   body{
+      background: linear-gradient(#0b0b0f, #1b1320);
+   }
+
+   #wrapper {
+      width: 1920px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   main{
+      background-color: transparent;
+   }
+
+   .grid {
+      grid-template-columns: auto auto auto auto;
+   }
+
+   aside {
+      grid-column: 1 / span 4;
+      font-size: 3em;
+   }
+}
